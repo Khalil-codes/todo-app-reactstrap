@@ -9,10 +9,10 @@ function TodoList({ todos, setTodos }) {
             {todos.length === 0 ? (
                 <h2 className="text-center">No Tasks</h2>
             ) : (
-                todos.map((todo) => {
+                todos.map((todo, idx) => {
                     return (
                         <Todo
-                            key={todo.id}
+                            key={idx}
                             todo={todo}
                             setTodos={setTodos}
                             todos={todos}
