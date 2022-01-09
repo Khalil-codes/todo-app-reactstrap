@@ -1,12 +1,5 @@
 import React, { useState } from 'react';
-import {
-    Button,
-    Form,
-    FormGroup,
-    Input,
-    InputGroup,
-    FormFeedback,
-} from 'reactstrap';
+import { Button, Form, FormGroup, Input, InputGroup } from 'reactstrap';
 
 function InputForm({ todos, setTodos, setStatus }) {
     const [inputText, setInputText] = useState('');
@@ -41,9 +34,6 @@ function InputForm({ todos, setTodos, setStatus }) {
                         onChange={inputTextHandler}
                         required
                     />
-                    <FormFeedback>
-                        Oh noes! that name is already taken
-                    </FormFeedback>
                     <Button color="secondary" onClick={addTodoHandler}>
                         <i className="fas fa-plus"></i>
                     </Button>

@@ -1,5 +1,6 @@
 import React from 'react';
 import { ListGroupItem, Button } from 'reactstrap';
+
 function Todo({ todo, todos, setTodos }) {
     const completeTodoHandler = () => {
         setTodos(
@@ -20,9 +21,14 @@ function Todo({ todo, todos, setTodos }) {
                 todo.complete ? 'completed' : ''
             }`}>
             <div onClick={completeTodoHandler}>{todo.text}</div>
-            <Button className="btn-trash" onClick={deleteTodoHandler}>
-                <i className="fas fa-trash"></i>
-            </Button>
+            <div>
+                <Button
+                    className="btn-trash"
+                    active={false}
+                    onClick={deleteTodoHandler}>
+                    <i className="fas fa-trash"></i>
+                </Button>
+            </div>
         </ListGroupItem>
     );
 }
